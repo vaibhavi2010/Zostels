@@ -1,0 +1,266 @@
+html,body{
+  margin:0;
+  color:#333;
+  background-image:url("slide3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Source Sans Pro',sans-serif;
+}
+.nav{
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+    color: black;
+}
+/* Dropdown Button */
+.links .dropdown .dropbtn {
+  background-color: #4CAF5000;
+  color: black;
+  font-weight: 550;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  border-radius: 200px;
+  margin-right: 20px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.links .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.links .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 410px;
+  border-radius: 20px;
+}
+
+/* Links inside the dropdown */
+.links .dropdown .dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.links .dropdown .dropdown-content a:hover {background-color: grey;border-radius: 20px;}
+
+/* Show the dropdown menu on hover */
+.links .dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.links .dropdown:hover .dropbtn {background-color: lightgrey;}
+h1{
+  text-align:center;
+  font-family:serif;
+  font-size:3em;
+  color:black;
+}
+.box{
+    width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin: 100px;
+  
+  }
+
+
+
+#team{
+  display:flex;
+  flex-wrap: wrap;
+  flex-grow:3;
+
+}
+.card {
+  position: relative;
+    width: 250px;
+    height: 300px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    z-index: 1;
+}
+
+
+
+.card:nth-of-type(3n){
+  margin-right:0;
+}
+
+.card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+.card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+.card img {
+ width: 100%;
+ height: 100%;
+  transition:all 0.9s;
+  
+}
+.card:hover img{
+ transform:scale(1.2,1.2)
+ bottom:80px;
+}
+
+
+.card .imgBx img{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+.data {
+  position: absolute;
+  bottom: 5%;
+  background: #fff;
+  text-align:center;
+  width: 90%;
+  height: 80px;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 5%;
+  box-sizing: border-box;
+  opacity: 0.8;
+  transition: all 0.4s
+}
+
+.card:hover .data {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  opacity: 0.9;
+  padding:90px 10%
+}
+.card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+
+
+.data h2 {
+  margin: 0 0 5px 0;
+  transition:color 0.4s
+}
+
+.data p {
+  opacity: 0;
+  text-align:justify;
+  transition: all 0.2s
+}
+
+.card:hover .data p,.card:hover .data a {
+  opacity: 1
+}
+
+.data a{
+  color:#333;
+  text-decoration:none;
+  padding:20px;
+  opacity:0
+}
+.data a:hover,.card:hover h2{
+  color:#38c
+}
+
+@media (max-width:799px){
+  .card {width:100%;margin-right:0}
+}
+
+@media only screen and (max-width: 600px){
+
+.nav{
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.nav h4{
+    font-size: 6vw;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* follow me @nodws */
+.btn-twtr{
+  color:#ddd;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-family:sans-serif;
+  font-weight:600;
+  margin-top:100px;
+  opacity:0.8
+}
+

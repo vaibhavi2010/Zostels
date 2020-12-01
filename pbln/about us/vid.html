@@ -1,0 +1,54 @@
+<html>
+<head>
+  <style>
+    button{
+      width: 150px;
+      height: 30px;
+      border-radius: 25px;
+      color: #01DFD7;
+      background-color: #292A0A;
+    }
+  </style>
+</head>
+<div style="text-align:center">
+  <button onclick="playPause()"> PLAY/PAUSE </button>
+  <button onclick="openFullscreen()">FullScreen</button>
+  <br><br>
+  <video id="video1" width="560">
+    <source src="20550625-preview.mp4" type="video/mp4">
+   
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+
+/* Get the element you want displayed in fullscreen mode (a video in this example): */
+var elem = document.getElementById("video1");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+
+ 
+ 
+</video>
+</html>

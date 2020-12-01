@@ -1,0 +1,123 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-image: url('slide4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-attachment: fixed;
+}
+
+p{
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.contact-in
+{
+    width: 80%;
+    height: 600px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff00000;
+}
+
+.contact-map
+{
+    width: 100%;
+    height: 100%;
+    flex: 50%;
+}
+.contact-map iframe
+{
+    width: 100%;
+    height: 100%;
+}
+.contact-form
+{
+    width: 100%;
+    height: 100%;
+    flex: 50%;
+    padding: 30px;
+    text-align: center;
+}
+.contact-form h1
+{
+    margin-bottom: 10px;
+}
+
+.contact-form-txt
+{
+    width: 100%;
+    height: 50px;
+    color: black;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+    background-color: #EAFAF100
+}
+.contact-form-txt::placeholder{
+    color: #fff000;
+    font-weight: bold;
+}
+.contact-form-textarea
+{
+    width: 100%;
+    height: 100px;
+    color: black;
+    border: 1px solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+    background-color: #EAFAF100
+}
+.contact-form-textarea::placeholder{
+    color: #fff000;
+    font-weight: bold;
+}
+.contact-form-btn
+{
+  background-color: #4CAF50;
+  color: #FBFCFC;;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  outline: none;
+}
+.contact-form-btn:hover{
+    background-color: grey;
+}
+@media screen and (max-width: 600px) {
+  .contact-form-btn {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 600px){
+    .contact-in{
+        width: 100%;
+        height: 100%;
+        margin-top: 350px;
+    }
+
+}
